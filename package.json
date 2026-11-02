@@ -1,0 +1,43 @@
+{
+  "name": "dsh-daily-tarot",
+  "version": "1.1.1",
+  "type": "module",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "assets",
+    "SOURCES.json",
+    "README.md",
+    "LICENSE",
+    "THIRD_PARTY_NOTICES.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true
+    }
+  },
+  "description": "每日塔罗：真实韦特牌面、3D 翻牌、随机正逆位，每天最多抽 10 次的 DeepSeek Harness 社区插件。",
+  "author": "Miaphant",
+  "license": "MIT",
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "tarot",
+    "daily-tarot"
+  ],
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test test/plugin.test.cjs"
+  }
+}
